@@ -24,24 +24,24 @@ export default function Main() {
 
   return (
     <div className="flex justify-center h-screen">
-      <div className="w-full md:w-[70%]">
+      <div className="w-full md:w-[50%]">
         <Assistant />
       </div>
-      <div className=" hidden md:block w-[30%]">
+      <div className=" hidden md:block w-[15%]">
         <ToolsPanel />
       </div>
       {/* Hamburger menu for small screens */}
       <div className="absolute top-4 right-4 md:hidden">
         <button onClick={() => setIsToolsPanelOpen(true)}>
-          <Menu size={24} />
+          <Menu size={16} />
         </button>
       </div>
       {/* Overlay panel for ToolsPanel on small screens */}
       {isToolsPanelOpen && (
-        <div className="fixed inset-0 z-50 flex justify-end bg-black bg-opacity-30">
+        <div className="fixed inset-0 z-50 flex justify-end bg-black bg-opacity-15">
           <div className="w-full bg-white h-full p-4">
             <button className="mb-4" onClick={() => setIsToolsPanelOpen(false)}>
-              <X size={24} />
+              <X size={12} />
             </button>
             <ToolsPanel />
           </div>
